@@ -79,6 +79,51 @@
     <section>
       <section>
         <h2>编写业务代码</h2>
+        <ul class="fragment">
+          <li>如何使用组件?</li>
+          <li>如何与后端交互?</li>
+          <li>如何 Debug?</li>
+        </ul>
+      </section>
+      <section data-markdown>
+        ##如何使用组件
+        ```html
+        &lt;temlate>
+          &lt;Calendar />
+        &lt;/temlate>
+
+        &lt;script>
+        import {
+          Calendar
+        } from 'bh-mint-ui';
+
+        export default {
+          components: {
+            Calendar
+          }
+        }
+
+        &lt;/script>
+        ```
+      </section>
+      <section>
+        <h2>如何与后端交互</h2>
+        <ul>
+          <li>vue-resource</li>
+          <li>跨域
+            <ul>
+              <li>open -a Google\ Chrome --args --disable-web-security --user-data-dir</li>
+              <li>Node proxy</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>如何 Debug</h2>
+        <ul>
+          <li>Chrome Dev tools</li>
+          <li>weinre</li>
+        </ul>
       </section>
     </section>
     <section>
