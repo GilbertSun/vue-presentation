@@ -124,6 +124,7 @@
         <h2>编写业务代码</h2>
         <ul class="fragment">
           <li>如何使用组件?</li>
+          <li>如何使用 Hybrid 能力?</li>
           <li>如何与后端交互?</li>
           <li>如何 Debug?</li>
         </ul>
@@ -168,6 +169,46 @@
           <li>vue tools</li>
           <li>weinre</li>
         </ul>
+      </section>
+    </section>
+    <section>
+      <section>
+        <h2>如何使用 Hybrid 能力</h2>
+      </section>
+      <section data-markdown>
+        ## 第一阶段
+
+        ```html
+        &lt;script src="../../jquery.mobile/jquery.min.js"></script>
+        &lt;script src="../../plugin.apis/cordova.js"></script>
+        &lt;script src="../../plugin.apis/webView.js"></script>
+        &lt;script src="../../common/js/public.js"></script>
+        ```
+      </section>
+      <section data-markdown>
+        ## 第二阶段
+
+        ```html
+        &lt;script src="./static/mobile/js/hybrid.js"&gt;&lt;/script&gt;
+        &lt;script&gt;
+          Hybrid.Init(() => {
+            // your code...
+          })
+        &lt;/script&gt;
+        ```
+      </section>
+      <section data-markdown>
+        ## 第三阶段
+
+        ```javascript
+        import SDK, {init} from 'src/index'
+
+        init(() => {
+          let {UI:{setNavHeader}} = SDK()
+          setNavHeader(...)
+        })
+
+        ```
       </section>
     </section>
     <section>
